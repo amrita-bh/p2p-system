@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Invoices</h2>
+
+<a href="/add_invoice" class="button">Add Invoice</a>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>PO ID</th>
+    <th>Amount</th>
+</tr>
+
+{% for i in invoices %}
+<tr>
+    <td>{{ i[0] }}</td>
+    <td>{{ i[1] }}</td>
+    <td>{{ i[2] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

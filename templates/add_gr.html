@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Goods Receipt</h2>
+
+<form method="POST">
+    Purchase Order:
+    <select name="po_id">
+        {% for p in pos %}
+        <option value="{{ p[0] }}">PO ID {{ p[0] }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    Received Quantity:
+    <input type="number" name="qty"><br><br>
+
+    <button type="submit">Submit GR</button>
+</form>
+
+<a href="/grs">View Goods Receipts</a>
+{% endblock %}

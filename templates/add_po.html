@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Create Purchase Order</h2>
+
+<form method="POST">
+    Vendor:
+    <select name="vendor_id">
+        {% for v in vendors %}
+        <option value="{{ v[0] }}">{{ v[1] }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    Requisition:
+    <select name="req_id">
+        {% for r in requisitions %}
+        <option value="{{ r[0] }}">{{ r[1] }} (Qty: {{ r[2] }})</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <button type="submit">Create PO</button>
+</form>
+
+<a href="/pos">View Purchase Orders</a>
+{% endblock %}

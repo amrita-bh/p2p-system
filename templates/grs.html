@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Goods Receipts</h2>
+
+<a href="/add_gr" class="button">Add GR</a>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>PO ID</th>
+    <th>Quantity</th>
+</tr>
+
+{% for g in grs %}
+<tr>
+    <td>{{ g[0] }}</td>
+    <td>{{ g[1] }}</td>
+    <td>{{ g[2] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

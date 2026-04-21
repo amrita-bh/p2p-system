@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Purchase Requisition</h2>
+
+<a href="/add_requisition" class="button">Add Requisition</a>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Item</th>
+    <th>Quantity</th>
+</tr>
+
+{% for r in requisitions %}
+<tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

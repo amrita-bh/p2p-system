@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add Vendor</h2>
+
+<form method="POST">
+    Name: <input type="text" name="name"><br><br>
+    Contact: <input type="text" name="contact"><br><br>
+    <button type="submit">Add Vendor</button>
+</form>
+
+<a href="/vendors">View Vendors</a>
+{% endblock %}

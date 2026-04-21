@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Make Payment</h2>
+
+<form method="POST">
+    Invoice:
+    <select name="invoice_id">
+        {% for i in invoices %}
+        <option value="{{ i[0] }}">Invoice {{ i[0] }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <button type="submit">Pay</button>
+</form>
+
+<a href="/payments">View Payments</a>
+{% endblock %}

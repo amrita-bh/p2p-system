@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Vendor Management</h2>
+
+<a href="/add_vendor" class="button">Add Vendor</a>
+
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Contact</th>
+</tr>
+
+{% for v in vendors %}
+<tr>
+    <td>{{ v[0] }}</td>
+    <td>{{ v[1] }}</td>
+    <td>{{ v[2] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

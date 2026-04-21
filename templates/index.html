@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="margin-bottom: 20px;">Procure-to-Pay System</h1>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+    <div class="card">
+        <h3>📦 Vendor</h3>
+        <a href="/add_vendor" class="button">Add Vendor</a><br>
+        <a href="/vendors" class="button">View Vendors</a>
+    </div>
+
+    <div class="card">
+        <h3>📝 Purchase Requisition</h3>
+        <a href="/add_requisition" class="button">Add Requisition</a><br>
+        <a href="/requisitions" class="button">View Requisitions</a>
+    </div>
+
+    <div class="card">
+        <h3>🛒 Purchase Order</h3>
+        <a href="/add_po" class="button">Create PO</a><br>
+        <a href="/pos" class="button">View POs</a>
+    </div>
+
+    <div class="card">
+        <h3>🚚 Goods Receipt</h3>
+        <a href="/add_gr" class="button">Add GR</a><br>
+        <a href="/grs" class="button">View GR</a>
+    </div>
+
+    <div class="card">
+        <h3>💰 Invoice</h3>
+        <a href="/add_invoice" class="button">Add Invoice</a><br>
+        <a href="/invoices" class="button">View Invoices</a>
+    </div>
+
+    <div class="card">
+        <h3>💳 Payment</h3>
+        <a href="/add_payment" class="button">Make Payment</a><br>
+        <a href="/payments" class="button">View Payments</a>
+    </div>
+
+</div>
+
+{% endblock %}

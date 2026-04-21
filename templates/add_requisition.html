@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add Purchase Requisition</h2>
+
+<form method="POST">
+    Item Name: <input type="text" name="item"><br><br>
+    Quantity: <input type="number" name="quantity"><br><br>
+    <button type="submit">Add Requisition</button>
+</form>
+
+<a href="/requisitions">View Requisitions</a>
+{% endblock %}

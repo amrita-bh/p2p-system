@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Create Invoice</h2>
+
+<form method="POST">
+    Purchase Order:
+    <select name="po_id">
+        {% for p in pos %}
+        <option value="{{ p[0] }}">PO ID {{ p[0] }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    Amount:
+    <input type="number" name="amount"><br><br>
+
+    <button type="submit">Create Invoice</button>
+</form>
+
+<a href="/invoices">View Invoices</a>
+{% endblock %}
